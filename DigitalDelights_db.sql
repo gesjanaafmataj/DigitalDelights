@@ -1,30 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
---
--- Host: 127.0.0.1
--- Generation Time: Nov 30, 2017 at 02:43 PM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 5.6.24
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `gamestore_fx_db`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `customers`
---
 
 CREATE TABLE `customers` (
   `CustomerID` int(11) NOT NULL,
@@ -35,19 +10,10 @@ CREATE TABLE `customers` (
   `Balance` double DEFAULT '50'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `customers`
---
-
 INSERT INTO `customers` (`CustomerID`, `UserName`, `Email`, `Password`, `CCNumber`, `Balance`) VALUES
 (1, 'Chris', 'lxristos@hotmail.com', '123456', '1596384569125478', 15),
 (2, 'frank32', 'frank@gmail.com', 'lala', '1234567891234567', 43);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `orders`
---
 
 CREATE TABLE `orders` (
   `OrderID` int(11) NOT NULL,
@@ -56,9 +22,6 @@ CREATE TABLE `orders` (
   `CustomerID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `orders`
---
 
 INSERT INTO `orders` (`OrderID`, `Quantity`, `ProductID`, `CustomerID`) VALUES
 (1, 1, 11, 1),
@@ -67,12 +30,6 @@ INSERT INTO `orders` (`OrderID`, `Quantity`, `ProductID`, `CustomerID`) VALUES
 (4, 1, 4, 1),
 (5, 1, 10, 2),
 (6, 1, 2, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `products`
---
 
 CREATE TABLE `products` (
   `ProductID` int(11) NOT NULL,
@@ -89,10 +46,6 @@ CREATE TABLE `products` (
   `ExeFile` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `products`
---
-
 INSERT INTO `products` (`ProductID`, `Title`, `Price`, `Description`, `Video`, `Platform`, `Cover`, `Image1`, `Image2`, `Image3`, `Image4`, `ExeFile`) VALUES
 (1, 'Zombie Apocalypse', 7.00, 'After a technological disaster, most of the world''s population is turned into zombies. The cities are in ruins, but a small percentage of people survived, and are now hiding in shelters. You are one of the survivors. Your task is to protect your shelter from the crowds of zombies and bloodthirsty mutants. You have a wide arsenal of weapons and upgrades at your disposal. You can also improve barricades at the shelter entrance, or create machine-gun towers that are very efficient against crowds of enemies. Game features: 45 levels, 4 types of weapons and upgrades, 4 types of upgrades for your shelter, 7 types of enemies. Atmospheric music and sounds effects.', 'https://www.youtube.com/watch?v=jKTWSDOydww', 'Windows', '/resources/images/covers/zombie-apocalypse-cover.png', '/resources/images/zombie-apocalypse-1.jpg', '/resources/images/zombie-apocalypse-2.jpg', '/resources/images/zombie-apocalypse-3.jpg', '/resources/images/zombie-apocalypse-4.jpg', 'http://www.gametop.com/download-free-games/zombie-apocalypse/download.html'),
 (2, 'City Racing', 5.00, 'City Racing is a hugely popular sandbox GTA style car racing game. This game gives you the freedom to explore the city in any way you want. Your can participate in illegal street races, win money, make spectacular jumping stunts, upgrade your car to beat your racing opponents or you can just work as a taxi driver. The gameplay is easy, you just need quick reflexes and a good eye to avoid the police cars and make some money. Download this full version racing game now and try to survive in the big city.', 'https://www.youtube.com/watch?v=3yFZk5SxFgg', 'Windows', '/resources/images/covers/city-racing-cover.jpg', '/resources/images/city-racing-1.jpg', '/resources/images/city-racing-2.jpg', '/resources/images/city-racing-3.jpg', '/resources/images/city-racing-4.jpg', 'http://www.gametop.com/download-free-games/city-racing/download.html'),
@@ -108,61 +61,29 @@ INSERT INTO `products` (`ProductID`, `Title`, `Price`, `Description`, `Video`, `
 (12, 'Alien Arena', 5.50, 'Do you like old school deathmatch with modern features? How about rich, colorful, arcadelike atmospheres? How about...retro Sci Fi? Then you''re going to love what Alien Arena has in store for you! This game combines some of the very best aspects of such games as Quake III and Unreal Tournament and wraps them up with a retro alien theme, while adding tons of original ideas to make the game quite unique. Alien Arena is a furious frag fest with arenas ranging from the small, to the massive. With a large built-in player base, it''s never hard to find a good match going on, at any hour of the day. The community is friendly, as well as prolific. Dozens of maps, models, and various accessories have been created by community members to add on to the game experience. ', 'https://www.youtube.com/watch?v=YNvep_oWFbs', 'Linux', '/resources/images/covers/alien-arena-cover.jpg', '/resources/images/alien-arena-1.jpg', '/resources/images/alien-arena-2.jpg', '/resources/images/alien-arena-3.jpg', '/resources/images/alien-arena-4.jpg', 'http://localhost/games/alienarena-7.66-linux.tar.gz'),
 (13, 'Smokin'' Guns', 8.50, 'Smokin'' Guns (SG) is a first-person shooter video game. Smokin'' Guns is intended to be a semi-realistic simulation of the "Old West''s" atmosphere and was developed on id Software''s Quake III Arena Engine. Gameplay as well as locations are inspired by Western movies, particularly from the Italowestern respectively Spaghetti Western genre. Here''s a list of some of the most important features of Smokin'' Guns:\n- A full arsenal of weapons with historically correct design. Check the weapons page for more information.\n- A variety of western styled maps and player models.\n- A realistic damage system with different locations (head, chest, neck, etc) and height-dependant falling damage.\n- New western styled gametypes for more fun: Bank Robbery and Duel Modes.\n- A money system allowing for equipment purchase with money from rewards & pickups.\n- Easy to use graphical user interface and HUD.\n- Other small improvements for better gameplay and enhanced fun.', 'https://www.youtube.com/watch?v=RGIYZf-BBfA', 'Linux', '/resources/images/covers/smokin-guns-cover.jpg', '/resources/images/smokin-guns-1.jpg', '/resources/images/smokin-guns-2.jpg', '/resources/images/smokin-guns-3.jpg', '/resources/images/smokin-guns-4.jpg', 'https://www.smokin-guns.org/downloads/Smokin_Guns_1.1.zip');
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `customers`
---
 ALTER TABLE `customers`
   ADD PRIMARY KEY (`CustomerID`),
   ADD UNIQUE KEY `Email` (`Email`);
 
---
--- Indexes for table `orders`
---
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`OrderID`),
   ADD KEY `ProductID` (`ProductID`),
   ADD KEY `CustomerID` (`CustomerID`);
 
---
--- Indexes for table `products`
---
 ALTER TABLE `products`
   ADD PRIMARY KEY (`ProductID`);
 
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `customers`
---
 ALTER TABLE `customers`
   MODIFY `CustomerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `orders`
---
+
 ALTER TABLE `orders`
   MODIFY `OrderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
---
--- AUTO_INCREMENT for table `products`
---
+
 ALTER TABLE `products`
   MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
---
--- Constraints for dumped tables
---
 
---
--- Constraints for table `orders`
---
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ProductID`),
   ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`CustomerID`);
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
