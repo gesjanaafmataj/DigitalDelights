@@ -1,0 +1,7 @@
+# DigitalDelights![account](https://github.com/gesjanaafmataj/DigitalDelights/assets/101891613/833acbfb-4a99-4acf-b71b-b1f0748eb351)
+![cart](https://github.com/gesjanaafmataj/DigitalDelights/assets/101891613/a68fa08b-af6b-4251-9b05-2af7cfeb75ea)
+![checkout](https://github.com/gesjanaafmataj/DigitalDelights/assets/101891613/e7c12143-5056-4fba-8903-d7ad50dea672)
+![library](https://github.com/gesjanaafmataj/DigitalDelights/assets/101891613/5f31a031-efd2-4caa-ac8e-1232c7f0290a)
+![login](https://github.com/gesjanaafmataj/DigitalDelights/assets/101891613/2abf3eae-b59a-4dbb-bee3-a65c80566caf)
+![register](https://github.com/gesjanaafmataj/DigitalDelights/assets/101891613/f4bfe52a-026b-4cd9-8002-98c61b80c138)
+![store](https://github.com/gesjanaafmataj/DigitalDelights/assets/101891613/40dd3f18-49c4-405e-91f7-90ea69f31340)
